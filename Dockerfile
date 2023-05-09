@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . .
 
 # Executando todos os arquivos .py no diretório de trabalho
-CMD ["python", "-m", "pytest"]
+CMD ["sh", "-c", "for file in *.py; do python \"$file\"; done"]
